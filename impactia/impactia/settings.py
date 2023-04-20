@@ -14,8 +14,11 @@ NEWSPIDER_MODULE = "impactia.spiders"
 CHROME_DRIVER_PATH = "/Applications/drivers/chromedriver_win32/chromedriver.exe"
 FEED_FORMAT = 'csv'
 FEED_URI ='output.csv'
-FEED_EXPORT_FIELDS = ['url', 'title', 'language', 'email', 'description', 'procedure_type', 'status', 'nuts', 'main_cpv', 'total_value', 'buyer', 'document_sent', 'dead_line']
-FEED_EXPORT_HEADERS = False
+#FEED_EXPORT_FIELDS = ['url', 'title', 'language', 'email', 'description', 'procedure_type', 'status', 'nuts', 'main_cpv', 'total_value', 'buyer', 'document_sent', 'dead_line']
+#FEED_EXPORT_HEADERS = False
+ITEM_PIPELINES = {
+    'impactia.pipelines.MyPipeline': 300,
+}
 
 
 
